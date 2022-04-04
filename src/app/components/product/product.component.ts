@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product';
+import { ProductResponseModel } from 'src/app/models/productResponseModel';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-product',
@@ -8,10 +10,26 @@ import { Product } from 'src/app/models/product';
 })
 export class ProductComponent implements OnInit {
 
+  dataLoaded = false;
   products:Product[] = [];
-  constructor() { }
+  productResponseModel:ProductResponseModel={
+    data : this.products,
+    message : "",
+    succees :true
+  }
+  constructor(private productService:ProductService) { }
 
   ngOnInit(): void {
+    this.getProducts();
+  }
+
+  getProducts(){
+    this.productService
+    .getProducts()
+    .subscribe((response) => {
+      this.products = response.data;
+      this.dataLoaded = true;
+    })
   }
 
 }

@@ -1,1 +1,23 @@
-<p>product works!</p>
+<div *ngIf="dataLoaded == false" class="spinner-border text-primary" role="status">
+  <span class="sr-only"></span>
+</div>
+<table *ngIf="dataLoaded == true" class="table">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Price</th>
+      <th>Category</th>
+      <th>Description</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let product of products">
+    <td>{{ product.id }}</td>
+    <td>{{ product.title }}</td>
+    <td>{{ product.price }}</td>
+    <td>{{ product.category }}</td>
+    <td>{{ product.description }}</td>
+    <td>{{ product.image }}</td>
+  </tr>
+</table>

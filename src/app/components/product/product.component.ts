@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ListResponseModel } from 'src/app/models/listResponseModel';
 import { Product } from 'src/app/models/product';
-import { ProductResponseModel } from 'src/app/models/productResponseModel';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -12,7 +12,7 @@ export class ProductComponent implements OnInit {
 
   dataLoaded = false;
   products:Product[] = [];
-  productResponseModel:ProductResponseModel={
+  productResponseModel:ListResponseModel<Product>={
     data : this.products,
     message : "",
     succees :true

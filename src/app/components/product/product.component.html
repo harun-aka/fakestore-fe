@@ -15,7 +15,7 @@
   <tr *ngFor="let product of products">
     <td>{{ product.id }}</td>
     <td>{{ product.title }}</td>
-    <td class="text-right">{{ product.price }}$</td>
+    <td class="text-right">${{ product.price }}</td>
     <td>{{ product.category }}</td>
     <td>{{ product.description }}</td>
     <td><img src="{{ product.image }}" class="img-fluid" alt="Responsive image"/></td>

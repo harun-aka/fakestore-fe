@@ -8,12 +8,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductComponent } from './components/product/product.component';
 import { NaviComponent } from './components/navi/navi.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
-    NaviComponent
+    NaviComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

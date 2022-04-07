@@ -10,7 +10,7 @@ import { TokenModel } from '../models/tokenModel';
 })
 export class AuthService {
 
-  apiUrl = "https://localhost:7173/api/auth/";
+  apiUrl = "https://harun-aka.github.io/FakeStore/auth/";
   constructor(private httpClient:HttpClient) { }
 
   login(loginModel:LoginModel){

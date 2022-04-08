@@ -9,7 +9,7 @@ import { Product } from '../models/product';
 })
 export class ProductService {
 
-  apiUrl = "https://harun-aka.github.io/FakeStore/products/";
+  apiUrl = "https://webapi20220409012244.azurewebsites.net/products/";
   constructor(private httpClient:HttpClient) { }
 
   getProducts():Observable<ListResponseModel<Product>> {

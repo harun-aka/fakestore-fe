@@ -10,7 +10,7 @@ import { TokenModel } from '../models/tokenModel';
 })
 export class AuthService {
 
-  apiUrl = "https://harun-aka.github.io/FakeStore/auth/";
+  apiUrl = "https://webapi20220409012244.azurewebsites.net/auth/";
   constructor(private httpClient:HttpClient) { }
 
   login(loginModel:LoginModel){
